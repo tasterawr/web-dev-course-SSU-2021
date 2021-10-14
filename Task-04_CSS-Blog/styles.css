@@ -1,0 +1,67 @@
+body {
+    margin: 0%;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    margin: 0;
+}
+
+.header {
+    margin: 0%;
+    height: 40px;
+    text-align: center;
+    background-color: green;
+}
+
+.menu-navigation, .content, .last-posts {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-navigation {
+    padding: 10px 0 0 10px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    width: 20%;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 10px 0 0 10px;
+    width: 60%;
+    border-left: 3px solid green;
+}
+
+.last-posts {
+    box-sizing: border-box;
+    padding: 10px 10px 0 0;
+    text-align: right;
+    border: 3px dotted green;
+    width: 20%;
+}
+
+.menu-navigation-links {
+    list-style: none;
+    padding: 0;
+}
+
+.last-posts-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer {
+    height: 40%;
+    text-align: center;
+}
+
+a:hover {
+    color: green;
+}
+
+a:visited {
+    background-color: purple;
+}
