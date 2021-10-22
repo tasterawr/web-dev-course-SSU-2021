@@ -1,0 +1,156 @@
+body {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+}
+hr {
+    border: none;
+    background-color: #d6d6d6;
+    height: 1px; 
+    width: 95%;
+}
+span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+progress {
+    margin-right: 30px;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color:rgb(173, 184, 235);
+}
+.photo-wrapper {
+    width: 120px;
+    height: 115px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5%;
+}
+.photo {
+    width: 130px;
+    height: 150px;
+}
+.header {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+    padding: 15px 70px; 
+    font-size: 1.2rem;
+    background-color: rgb(58, 65, 100);
+    color: white;
+    box-shadow: 0px 5px 20px rgba(177, 172, 172, 0.85);
+}
+.header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.header p {
+    margin-top: 10px;
+}
+.name-cell {
+    text-align: start;
+    padding-left: 20px;
+}
+.links-cell {
+    text-align: end;
+    padding: 0 20px 0 10px;
+}
+.links-cell li {
+    list-style: none;
+}
+.cv-row {
+    padding: 0 70px;
+}
+.profile-section,
+.skills-section,
+.education-section,
+.languages-section,
+.hobbies-section {
+    width: 75%;
+    margin: 0 auto;
+}
+.content-wrapper {
+    padding: 10px 50px;
+}
+.content-header {
+    color: rgb(57, 67, 116);
+    margin-bottom: 30px;
+}
+.skills-table {
+    margin: 0 auto;
+    width: 70%;
+}
+.skills-table th{
+    text-align: start;
+}
+.hard-skills li, .soft-skills li {
+    list-style: none;
+}
+.hard-skills ul, .soft-skills ul {
+    padding: 0;
+}
+.soft-skills li:nth-child(1)::before {
+    content: "🗣";
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.soft-skills li:nth-child(2)::before {
+    content: "👨‍💻";
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.soft-skills li:nth-child(3)::before {
+    content: "🤝";
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.soft-skills li:nth-child(4)::before {
+    content: "📈";
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.languages-section li{
+    list-style: none;
+}
+.languages-section ul{
+    padding: 0;
+}
+.languages-section li:nth-child(1)::before {
+    content: "🇺🇸";
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.languages-section li:nth-child(2)::before {
+    content: "🇷🇺";
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.date {
+    font-weight: 700;
+}
+.education {
+    font-style: italic;
+}
+.education-section li {
+    list-style: square;
+}
+.hobbies-section {
+    margin-bottom: 50px;
+}
