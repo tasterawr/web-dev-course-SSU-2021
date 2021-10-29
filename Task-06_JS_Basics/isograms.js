@@ -1,3 +1,4 @@
+console.log("Задание 5");
 function isIsogram(word){
     return word.length === new Set(word.toLowerCase()).size;
 }

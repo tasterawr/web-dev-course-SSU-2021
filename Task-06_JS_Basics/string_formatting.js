@@ -1,3 +1,4 @@
+console.log("Задание 4");
 function format(input){
     return input.split("").map(function(element, index){ 
         return element.toUpperCase() + element.repeat(index);

@@ -1,3 +1,4 @@
+console.log("Задание 3");
 function vowelCount(word){
     let match = word.match(/[aeiou]/gi);
     return match ? match.length : 0;

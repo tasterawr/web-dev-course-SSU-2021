@@ -1,3 +1,4 @@
+console.log("Задание 2");
 function toBinary(word){
     let result = [];
     word.split("").forEach(element => {

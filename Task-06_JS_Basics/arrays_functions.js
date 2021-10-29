@@ -1,3 +1,4 @@
+console.log("Задание 1");
 function flatten(array) {
     let result = [...array];
     for (let i=0; i < result.length;){
