@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task-9</title>
+</head>
+
+<body>
+    <h1 class="title">Задание №9</h1>
+    <div class="func-block">
+        <h2>Подсчёт гласных</h2>
+        <p>
+            Эта функция принимает на вход строку произвольных символов и возвращает число английских гласных в этой
+            строке.
+            Гласным считаются буквы a, e, i, o, u (но не y).
+        </p>
+        <input id="vowel" type="text" placeholder="Введите слово">
+        <button class="clearVowel">Сбросить</button>
+        <button class="vowel-btn">Выполнить</button>
+        <div class="vowelResult result"></div>
+    </div>
+    <div class="func-block">
+        <h2>Формула для (a+b)^n</h2>
+        <p>
+            Эта функция принимает на вход число n и возвращает строку с формулой степени суммы для этого числа.
+        </p>
+        <input id="degree" type="number" placeholder="Введите n">
+        <button class="clearDegree">Сбросить</button>
+        <button class="degree-btn">Выполнить</button>
+        <div class="degreeResult result"></div>
+    </div>
+    <div class="func-block">
+        <h2>Игра на выбывание</h2>
+        <p>
+            Эта функция принимает два параметра – количество участников в круге n и шаг k,
+            на котором участник выбывает из круга в ходе одного раунда. Каждый раунд функция исключает одного участника
+            и продолжает определять выбывших по кругу до тех пор, пока круг не сократится до одного победителя.
+        </p>
+        <input id="eleminateN" type="number" placeholder="Участников n" min="1">
+        <input id="eleminateM" type="number" placeholder="Шаг k" min="1">
+        <button class="clearEleminate">Сбросить</button>
+        <button class="eleminate-btn">Выполнить</button>
+        <div class="eleminateResult result"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
