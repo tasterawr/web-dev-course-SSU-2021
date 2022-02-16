@@ -1,0 +1,43 @@
+.mainGameField {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.selectField {
+    text-align: center;
+    width:40%;
+    height: 50px;
+    font-size: 1.2rem;
+    transition: 0.2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.select {
+    width: 40%;
+    font-size: 1.2rem;
+}
+
+.btn-start {
+    font-weight: 300;
+    font-size: 1.7rem;
+    background-color: #414143;
+    color: white;
+    height: 100%;
+    border: none;
+    border-color: black;
+    border-radius: .2rem;
+    width:20%;
+    height: 40px;
+    font-size: 16;
+    transition: 0.2s;
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-start:hover {
+    transform: scale(1.008);
+}

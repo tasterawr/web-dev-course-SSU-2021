@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <title>Hangman Browser Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Is Alive</h1>
+    <header class="header">
+      <p class="gameName">Hangman Browser Game</p>
+    </header>
+    <main class="main">
+      <div class="mainMenu" hidden>
+        <div class="selectField">
+          <label class="label" for="questionTypes">Выберите тему вопросов:</label>
+          <select name="questionTypes" id="questionTypes" class="select">
+            <option value="different">Разное</option>
+            <option value="it">Информационные технологии</option>
+            <option value="music">Музыка</option>
+            <option value="cinema">Кино</option>
+          </select>
+        </div>
+        <div class="selectField">
+          <label class="label" for="roomTypes">Выберите игровую комнату:</label>
+          <select name="roomTypes" id="roomTypes" class="select">
+            <option value="hangman">Виселица</option>
+            <option value="drowner">Затопление</option>
+          </select>
+        </div>
+        <button class="btn-start" onclick="startGame()">Начать игру</button>
+      </div>
+      <div class="mainGameField">
+        <div class="wrongGuessesField">
+          <span>Количество неверных угадываний: </span>
+          <span id="wrongGuessesCnt">0</span>
+          <span> из </span>
+          <span id="maxWrongGuesses"></span>
+        </div>
+        <img id="gameFieldPic" src="images/content/hangman/hangman0.png">
+        <div class="questionField">
+          <span>Вопрос: </span>
+          <span id="questionText"></span>
+        </div>
+        <div class="answerField">
+          <p class="answer">Answer</p>
+          <span>Угадано букв: </span>
+          <span id="guessedLettersCtr">0</span>
+          <span> из </span>
+          <span id="numOfLetters"></span>
+        </div>
+      </div>
+    </main>
+    
   </body>
 </html>
