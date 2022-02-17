@@ -26,11 +26,39 @@
     // text-align: center;
     width: 40%;
     display: block;
-    margin: 20px;
+    margin: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .answer {
     text-align: center;
+}
+
+.keyboard {
+    text-align: center;
+    width: 60%;
+    height: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-keyboard {
+    font-weight: 300;
+    font-size: 1.2rem;
+    background-color: #414143;
+    color: white;
+    height: 100%;
+    width: 30px;
+    border: none;
+    border-color: black;
+    border-radius: .2rem;
+    height: 40px;
+    font-size: 16;
+    transition: 0.2s;
+}
+
+.btn-keyboard:hover {
+    transform: scale(1.200);
 }

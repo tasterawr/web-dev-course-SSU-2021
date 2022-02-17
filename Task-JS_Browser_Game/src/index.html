@@ -13,11 +13,10 @@
       <p class="gameName">Hangman Browser Game</p>
     </header>
     <main class="main">
-      <div class="mainMenu" hidden>
+      <div id="mainMenu" class="mainMenu">
         <div class="selectField">
           <label class="label" for="questionTypes">Выберите тему вопросов:</label>
           <select name="questionTypes" id="questionTypes" class="select">
-            <option value="different">Разное</option>
             <option value="it">Информационные технологии</option>
             <option value="music">Музыка</option>
             <option value="cinema">Кино</option>
@@ -30,9 +29,9 @@
             <option value="drowner">Затопление</option>
           </select>
         </div>
-        <button class="btn-start" onclick="startGame()">Начать игру</button>
+        <button id="btn-start" class="btn-start" type="submit">Начать игру</button>
       </div>
-      <div class="mainGameField">
+      <div id="mainGameField" class="mainGameField" hidden>
         <div class="wrongGuessesField">
           <span>Количество неверных угадываний: </span>
           <span id="wrongGuessesCnt">0</span>
@@ -45,11 +44,19 @@
           <span id="questionText"></span>
         </div>
         <div class="answerField">
-          <p class="answer">Answer</p>
+          <p id="answerStatus" class="answer">Answer</p>
           <span>Угадано букв: </span>
           <span id="guessedLettersCtr">0</span>
           <span> из </span>
           <span id="numOfLetters"></span>
+        </div>
+        <div id="keyboardSwitchField" class="answerField">
+          <input type="checkbox" id="langCb" name="langCb">
+          <label for="langCb">Английские буквы</label>
+        </div>
+        <div id="rusKeyboard" class="keyboard">
+        </div>
+        <div id="engKeyboard" class="keyboard hidden">
         </div>
       </div>
     </main>

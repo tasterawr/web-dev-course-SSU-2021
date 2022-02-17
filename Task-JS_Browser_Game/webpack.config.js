@@ -23,6 +23,7 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
 }));
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
   },
