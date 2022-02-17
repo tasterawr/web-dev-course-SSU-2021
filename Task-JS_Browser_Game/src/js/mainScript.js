@@ -62,8 +62,6 @@ engCb.addEventListener('change', function(){
     document.getElementById("engKeyboard").classList.toggle("hidden");
 })
 
-startButton.getE
-
 function selectQuestion(){
     var questionsForType = [];
     for (let i = 0; i < questions.length; i++){
