@@ -1,10 +1,18 @@
-.wrongGuessesField {
+.upperGameInfo {
     width: 40%;
     height: 20%;
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.wrongGuessesField {
+    float: left;
+}
+
+.timerField {
+    float: right;
 }
 
 #gameFieldPic {

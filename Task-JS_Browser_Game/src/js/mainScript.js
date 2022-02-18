@@ -3,6 +3,7 @@ import {loadEngKeyboard} from '../js/keyboardLoader.js';
 // import {updatePictureStatus} from '../js/gameDataUpdate.js';
 // import {updateAnswerStatus} from '../js/gameDataUpdate.js';
 import * as gameDataUpdate from '../js/gameDataUpdate.js';
+import * as timer from '../js/timer.js';
 
 let questions = [ 
     'it_Принцип ООП, согласно которому переопределенные методы класса могут предоставлять различное поведение при общем базовом интерфейсе (рус.)_полиморфизм',
@@ -56,6 +57,7 @@ startButton.addEventListener('click', function(){
     loadRusKeyboard(handleGuess);
     loadEngKeyboard(handleGuess);
     console.log("Game field configured successfully.");
+    timer.enableTimer(60);
 });
 
 engCb.addEventListener('change', function(){
