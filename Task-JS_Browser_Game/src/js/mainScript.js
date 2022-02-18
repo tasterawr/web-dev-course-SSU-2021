@@ -35,6 +35,7 @@ let questions = [
 let questionsType = null;
 let roomType = null;
 
+let difficulty = "";
 let maxWrongGuesses = 6;
 let wrongGuesses = 0;
 let answer = "";
@@ -56,13 +57,26 @@ startButton.addEventListener('click', function(){
     selectQuestion();
     loadRusKeyboard(handleGuess);
     loadEngKeyboard(handleGuess);
+    setDifficulty();
     console.log("Game field configured successfully.");
-    timer.enableTimer(60);
 });
 
 engCb.addEventListener('change', function(){
     document.getElementById("engKeyboard").classList.toggle("hidden");
 })
+
+function setDifficulty(){
+    difficulty = document.getElementById("difficultyTypes").value;
+    if (difficulty === "easy"){
+        document.getElementById("timerField").classList.add("hidden");
+    } else if (difficulty === "medium"){
+        timer.enableTimer(45);
+    } else if (difficulty === "hard"){
+        timer.enableTimer(30);
+    } else {
+        timer.enableTimer(30);
+    }
+}
 
 function selectQuestion(){
     var questionsForType = [];
@@ -79,6 +93,14 @@ function selectQuestion(){
     update();
 }
 
+function updateTimer(){
+    if (difficulty === "medium"){
+        timer.addToTime(5);
+    } else if (difficulty === "hard"){
+        timer.addToTime(2);
+    }
+}
+
 function switchPages(pageToClose, pageToOpen){
     pageToClose.hidden = true;
     pageToOpen.hidden = false;
@@ -92,6 +114,7 @@ function handleGuess(evt){
 
     if (answer.includes(letter)){
         guessedLetters.push(letter);
+        updateTimer();
     } else {
         wrongGuesses++;
     }

@@ -29,6 +29,15 @@
             <option value="drowner">Затопление</option>
           </select>
         </div>
+        <div class="selectField">
+          <label class="label" for="difficultyTypes">Выберите уровень сложности:</label>
+          <select name="difficultyTypes" id="difficultyTypes" class="select">
+            <option value="easy">Простой</option>
+            <option value="medium">Средний</option>
+            <option value="hard">Сложный</option>
+            <option value="veryhard">Очень сложный</option>
+          </select>
+        </div>
         <button id="btn-start" class="btn-start" type="submit">Начать игру</button>
       </div>
       <div id="mainGameField" class="mainGameField" hidden>
@@ -39,8 +48,8 @@
             <span> из </span>
             <span id="maxWrongGuesses"></span>
           </div>
-          <div class="timerField">
-            <span>Таймер: </span>
+          <div id="timerField" class="timerField">
+            <span>Таймер </span>
             <span id="timer" class="timer">0</span>
           </div>
         </div>
