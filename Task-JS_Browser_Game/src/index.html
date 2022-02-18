@@ -32,11 +32,17 @@
         <button id="btn-start" class="btn-start" type="submit">Начать игру</button>
       </div>
       <div id="mainGameField" class="mainGameField" hidden>
-        <div class="wrongGuessesField">
-          <span>Количество неверных угадываний: </span>
-          <span id="wrongGuessesCnt">0</span>
-          <span> из </span>
-          <span id="maxWrongGuesses"></span>
+        <div class="upperGameInfo">
+          <div class="wrongGuessesField">
+            <span class="left">Количество неверных угадываний: </span>
+            <span id="wrongGuessesCnt">0</span>
+            <span> из </span>
+            <span id="maxWrongGuesses"></span>
+          </div>
+          <div class="timerField">
+            <span>Таймер: </span>
+            <span id="timer" class="timer">0</span>
+          </div>
         </div>
         <img id="gameFieldPic" src="images/content/hangman/hangman0.png">
         <div class="questionField">

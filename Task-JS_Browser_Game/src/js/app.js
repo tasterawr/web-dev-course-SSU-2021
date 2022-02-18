@@ -3,3 +3,4 @@ import '../scss/mainMenu.scss';
 import '../scss/gameField.scss';
 import '../js/mainScript.js';
 import '../js/keyboardLoader.js';
+import '../js/timer.js';
