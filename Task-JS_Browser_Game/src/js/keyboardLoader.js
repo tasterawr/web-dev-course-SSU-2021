@@ -1,4 +1,9 @@
+let rusKeyboardLoaded = false;
+let engKeyboardLoaded = false;
+
 export function loadRusKeyboard(handleGuess){
+    if (rusKeyboardLoaded) return;
+
     let alphabetString = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
     let buttonsHTML = alphabetString.split('').map(letter =>
         `
@@ -13,9 +18,14 @@ export function loadRusKeyboard(handleGuess){
         button.addEventListener('click', handleGuess, false);
         button.param = letters[i];
     }
+
+    rusKeyboardLoaded = true;
+    console.log("Russian keyboard loaded successfully.")
 }
 
 export function loadEngKeyboard(handleGuess){
+    if (engKeyboardLoaded) return;
+
     let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     let buttonsHTML = alphabetString.split('').map(letter =>
         `
@@ -30,4 +40,7 @@ export function loadEngKeyboard(handleGuess){
         button.addEventListener('click', handleGuess, false);
         button.param = letters[i];
     }
+
+    engKeyboardLoaded = true;
+    console.log("English keyboard loaded successfully.")
 }

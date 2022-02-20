@@ -53,7 +53,7 @@
             <span id="timer" class="timer">0</span>
           </div>
         </div>
-        <img id="gameFieldPic" src="images/content/hangman/hangman0.png">
+        <img id="gameFieldPic" class="gameFieldPic" src="images/content/hangman/hangman0.png">
         <div class="questionField">
           <span>Вопрос: </span>
           <span id="questionText"></span>
@@ -73,6 +73,31 @@
         </div>
         <div id="engKeyboard" class="keyboard hidden">
         </div>
+      </div>
+      <div id="endLevelScreen" class="endLevelScreen" hidden>
+        <div class="upperGameInfo">
+          <div class="wrongGuessesField">
+            
+          </div>
+        </div>
+        <img id="endGamePic" class="gameFieldPic" src="images/content/hangman/hangman0.png">
+        <h2 class="resultTitle">Уровень пройден!</h2>
+        <div class="resultsField">
+          <div>
+            <span>Пройдено вопросов: </span>
+            <span id="questionsTakenCtr">0</span>
+          </div>
+          <div>
+            <span>Уровень сложности: </span>
+            <span id="difficultyName"> </span>
+          </div>
+          <div>
+            <span>Тема: </span>
+            <span id="questionsTypeName"> </span>
+          </div>
+        </div>
+        <button id="btn-next" class="btn-win-field" type="submit">Следующий вопрос</button>
+        <button id="btn-menu" class="btn-win-field" type="submit">Вернуться в меню</button>
       </div>
     </main>
     

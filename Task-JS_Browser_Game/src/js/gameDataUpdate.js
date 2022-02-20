@@ -1,5 +1,6 @@
 function updatePictureStatus(roomType, wrongGuesses){
     document.getElementById("gameFieldPic").src = "images/content/" + roomType + "/" + roomType + wrongGuesses + ".png";
+    console.log("Picture status set to " + roomType + wrongGuesses + ".");
 }
 
 function updateAnswerStatus(answer, guessedLetters){
@@ -12,10 +13,12 @@ function updateAnswerStatus(answer, guessedLetters){
     }).join('');
     document.getElementById("guessedLettersCtr").innerHTML = rightGuesses;
     document.getElementById("answerStatus").innerHTML = newStatus;
+    console.log("Answer status updated");
 }
 
 function updateWrongGuesses(wrongGuesses){
     document.getElementById("wrongGuessesCnt").innerHTML = wrongGuesses;
+    console.log("Wrong guesses set to " + wrongGuesses);
 }
 
 export function updateData(roomType, wrongGuesses, answer, guessedLetters){
