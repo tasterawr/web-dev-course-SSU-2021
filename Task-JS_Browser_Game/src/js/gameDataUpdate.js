@@ -1,3 +1,5 @@
+import * as gd from '../js/gameDefaults.js';
+
 function updatePictureStatus(roomType, wrongGuesses){
     document.getElementById("gameFieldPic").src = "images/content/" + roomType + "/" + roomType + wrongGuesses + ".png";
     console.log("Picture status set to " + roomType + wrongGuesses + ".");
