@@ -4,13 +4,13 @@ var intervalId = null;
 const timerEl = document.getElementById('timer');
 
 function updateTimer(){
+    time--;
     if (time < 0) return;
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
 
     seconds = seconds < 10 ? '0' + seconds : seconds;
     timerEl.innerHTML = minutes + ":" + seconds;
-    time--;
 }
 
 export function enableTimer(seconds){
@@ -27,5 +27,10 @@ export function addToTime(sec) {
 }
 
 export function timeIsOut(){
-    return time <= 0;
+    if (intervalId != null){
+        return time <= 0;
+    } else {
+        return false;
+    }
+
 }

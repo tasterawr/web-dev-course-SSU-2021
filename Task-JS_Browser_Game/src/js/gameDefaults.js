@@ -1,4 +1,6 @@
 export const MAX_WRONG_GUESSES = 6;
+export const WIN_MESSAGE = "Уровень пройден!";
+export const LOSE_MESSAGE = "Игра окончена.";
 
 export const QUESTIONS = [ 
     'it_Принцип ООП, согласно которому переопределенные методы класса могут предоставлять различное поведение при общем базовом интерфейсе (рус.)_полиморфизм',

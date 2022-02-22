@@ -55,6 +55,8 @@ function setDifficulty(){
     let sel = document.getElementById("difficultyTypes");
     difficulty = sel.value;
     difficultyName = sel.options[sel.selectedIndex].text;
+    
+    document.getElementById("timerField").classList.remove("hidden");
     if (difficulty === "easy"){
         document.getElementById("timerField").classList.add("hidden");
     } else if (difficulty === "medium"){
@@ -121,6 +123,8 @@ function testEndGame(){
 
     if (parseInt(guessed) === answer.length){
         performWinLogic();
+    } else if (wrongGuesses === gd.MAX_WRONG_GUESSES || timer.timeIsOut()){
+        performLoseLogic();
     }
 }
 
@@ -128,11 +132,26 @@ function performWinLogic(){
     clearInterval(startGameIntervalId);
     timer.disableTimer();
     questionsTakenCtr++;
-    const gameField = document.getElementById("mainGameField");
-    const winGameField = document.getElementById("endLevelScreen");
-    switchPages(gameField, winGameField);
-    document.getElementById("endGamePic").src = "images/content/" + roomType + "/" + roomType + wrongGuesses + ".png";
+    document.getElementById("resultTitle").innerHTML = gd.WIN_MESSAGE;
+    document.getElementById("btn-next").classList.remove("hidden");
     setStats();
+
+    const gameField = document.getElementById("mainGameField");
+    const endGameField = document.getElementById("endLevelScreen");
+    switchPages(gameField, endGameField);
+}
+
+function performLoseLogic(){
+    clearInterval(startGameIntervalId);
+    timer.disableTimer();
+    questionsTakenCtr++;
+    document.getElementById("resultTitle").innerHTML = gd.LOSE_MESSAGE;
+    document.getElementById("btn-next").classList.add("hidden");
+    setStats();
+
+    const gameField = document.getElementById("mainGameField");
+    const endGameField = document.getElementById("endLevelScreen");
+    switchPages(gameField, endGameField);
 }
 
 function nextLevel(){
@@ -156,6 +175,11 @@ function returnToMenu(){
 }
 
 function setStats(){
+    if (wrongGuesses > 6){
+        wrongGuesses = 6;
+    }
+
+    document.getElementById("endGamePic").src = "images/content/" + roomType + "/" + roomType + wrongGuesses + ".png";
     document.getElementById("questionsTakenCtr").innerHTML = questionsTakenCtr;
     document.getElementById("difficultyName").innerHTML = difficultyName;
     document.getElementById("questionsTypeName").innerHTML = questionsTypeName;
