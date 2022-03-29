@@ -1,5 +1,6 @@
 export const MAX_WRONG_GUESSES = 6;
-export const WIN_MESSAGE = "Уровень пройден!";
+export const LEVEL_WIN_MESSAGE = "Уровень пройден!";
+export const GAME_WIN_MESSAGE = "Победа!";
 export const LOSE_MESSAGE = "Игра окончена.";
 
 export const QUESTIONS = [ 
