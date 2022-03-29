@@ -27,6 +27,13 @@ module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
   },
+
+  devServer: {
+    host: '0.0.0.0',//your ip address
+    port: 8080,
+    // disableHostCheck: true,
+  },
+
   output: {
     filename: 'js/[name].js',
     path: environment.paths.output,
