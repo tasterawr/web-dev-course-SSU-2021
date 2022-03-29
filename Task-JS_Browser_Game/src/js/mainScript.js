@@ -11,6 +11,9 @@ export let difficulty = "";
 export let difficultyName = "";
 export let questionsTypeName = "";
 export let questionsTakenCtr = 0;
+export let isFirstStart = true;
+export let questionsForType = [];
+
 
 //--------SINGLE LEVEL DATA-------------
 export let wrongGuesses = 0;
@@ -39,6 +42,10 @@ function startGame(){
 
     switchPages(mainMenuPage, mainGameField);
     update();
+    if (isFirstStart){
+        initQuestions();
+        isFirstStart = false;
+    }
     selectQuestion();
     loadRusKeyboard(handleGuess);
     loadEngKeyboard(handleGuess);
@@ -70,18 +77,23 @@ function setDifficulty(){
     console.log("Difficulty set to " + difficulty + ".")
 }
 
-function selectQuestion(){
-    let questionsForType = [];
+function initQuestions(){
+    questionsForType = [];
     for (let i = 0; i < gd.QUESTIONS.length; i++){
         if (gd.QUESTIONS[i].startsWith(questionsType)){
             questionsForType.push(gd.QUESTIONS[i]);
         }
     }
+}
 
-    let question = questionsForType[Math.floor(Math.random() * questionsForType.length)].split('_');
+function selectQuestion(){
+    let index = Math.floor(Math.random() * questionsForType.length)
+    let question = questionsForType[index].split('_');
     document.getElementById("questionText").innerHTML = question[1];
     answer = question[2];
     document.getElementById("numOfLetters").innerHTML = answer.length;
+
+    questionsForType.splice(index, 1)
     update();
 }
 
@@ -132,8 +144,15 @@ function performWinLogic(){
     clearInterval(startGameIntervalId);
     timer.disableTimer();
     questionsTakenCtr++;
-    document.getElementById("resultTitle").innerHTML = gd.WIN_MESSAGE;
-    document.getElementById("btn-next").classList.remove("hidden");
+
+    if (questionsForType.length != 0){
+        document.getElementById("btn-next").classList.remove("hidden");
+        document.getElementById("resultTitle").innerHTML = gd.LEVEL_WIN_MESSAGE;
+    }
+    else {
+        document.getElementById("btn-next").classList.add("hidden");
+        document.getElementById("resultTitle").innerHTML = gd.GAME_WIN_MESSAGE;
+    }
     setStats();
 
     const gameField = document.getElementById("mainGameField");
@@ -171,6 +190,7 @@ function returnToMenu(){
     wrongGuesses = 0;
     const mainMenu = document.getElementById("mainMenu");
     const winGameField = document.getElementById("endLevelScreen");
+    isFirstStart = true;
     switchPages(winGameField, mainMenu);
 }
 
